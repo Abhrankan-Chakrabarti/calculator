@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach((item) => {
     item.onclick = () => {
-        // Prevent appending numbers while the warning message is visible
+        // Clear screen text if an error or user warning is currently visible
         if (display.innerText === 'Please Enter Something to Calculate' || display.innerText === 'Error') {
             display.innerText = '';
         }
@@ -17,7 +17,7 @@ buttons.forEach((item) => {
         } 
         else if (display.innerText !== '' && item.id === 'equal') {
             try {
-                // Safeguard against bad expressions like "5++" or "8*"
+                // Safeguards against incomplete expressions like "5++" or "8*"
                 display.innerText = eval(display.innerText);
             } catch (error) {
                 display.innerText = 'Error';
