@@ -1,78 +1,69 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+*{  
+    padding: 0;  
+    margin: 0;  
+    box-sizing: border-box;  
+}  
+  
+body{  
+    background-color: purple;  
+}  
+  
+.container{  
+    height: 100vh;  
+    width: 100vw;  
+    display: grid;  
+    place-items: center;  
+}  
+  
+.calculator{  
+    height: auto;  
+    width: auto;  
+    padding : 20px;  
+    background-color: white;  
+    border-radius: 10px;  
+    box-shadow: 0 0 30px black;  
+}  
+  
+#display{  
+    height: 150px;  
+    width: 270px;  /* Added fixed width to prevent screen warping */
+    display: flex;  
+    align-items: flex-end;  
+    justify-content: flex-end;  
+    font-size: 24px;  /* Adjusted down slightly to fit warning text */
+    margin-bottom: 20px;  
+    word-break: break-all; /* Ensures long equations wrap instead of overflowing */
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}  
+  
+button {  
+    height: 60px;  
+    width: 60px;  
+    border: 0;  
+    margin : 5px;  
+    font-size: 20px;  
+    cursor: pointer;  
+    border-radius: 5px; /* Added slight rounding to modernise the buttons */
+}  
+  
+/* Locate button#equal and update it to this: */
+button#equal{  
+    background-color: darkgray;  
+    color: black;  
+}  
 
-body{
-    background-color: purple;
-}
-
-
-
-
-
-.container{
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    place-items: center;
-}
-
-
-
-.calculator{
-    height: auto;
-    width: auto;
-    padding : 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 30px black;
-}
-
-
-#display{
-    height: 150px;
-    width: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    font-size: 30px;
-    margin-bottom: 20px;
-
-
-}
-
-button {
-    height: 60px;
-    width: 60px;
-    border: 0;
-    margin : 5px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-button#equal{
-    height: 130px;
-    background-color: darkgray;
-    color :black
-}
-
-
-
-.calculator button#clear{
-    background-color: crimson;
-    color : white
-}
-
-
-.calculator button.btn-operator{
-       background-color:black;
-       color: white;
-}
-
-.calculator button.btn-number{
-    background-color:black;
-    color: white;
+.calculator button#clear{  
+    background-color: crimson;  
+    color : white  
+}  
+  
+.calculator button.btn-operator{  
+       background-color:black;  
+       color: white;  
+}  
+  
+.calculator button.btn-number{  
+    background-color:black;  
+    color: white;  
 }
